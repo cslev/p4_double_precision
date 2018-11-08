@@ -63,7 +63,7 @@ int64_to_double(mmultiply_res_double, mmultiply_res, (bit<64>)(10000));
 p4_logger(mmultiply_res_double);
 ```
 
-In the above example, we define 3 double precision number via their 8-byte hexadecimal representation, in particular 1.1, -1.1, 0.2. Then, we convert each of them to an int64 representation with the precision set to 100 (i.e.,, to 2). Next, we subtract 0.2 from 1.1, in particular, we subtract the int64 representation of 0.2 (i.e., 20) from the int64 representation of 1.1 (i.e., 110). Similarly, we also subtract 0.2 from -1.1 to see whether negative numbers are also working properly. Once, the subtractions are made, we convert the int64 values back to double precision numbers and stores their hexadecimal/binary representation. To check other operator, we also multiply 1.1 with 0.2 and 1.1 with -0.2. Note that in case of multiplication the precision values are also need to be multiplied to get the correct value, i.e., if for 1.1 and 0.2 we use a precision value of 100, then for the conversion we need to use a precision value of 10000. The corresponding output can be seen below (outputs are printed via std::cout calls in the extern functions):
+In the above example, we define 3 double precision number via their 8-byte hexadecimal representation<sup>[1](#myfootnote1)</sup>, in particular 1.1, -1.1, 0.2. Then, we convert each of them to an int64 representation with the precision set to 100 (i.e., to 2). As one can observe, in order to avoid costly power function, precision should be set by already doing the powering function in your head (this could be another approach as well). Next, we subtract 0.2 from 1.1, in particular, we subtract the int64 representation of 0.2 (i.e., 20) from the int64 representation of 1.1 (i.e., 110). Similarly, we also subtract 0.2 from -1.1 to see whether negative numbers are also working properly. Once, the subtractions are made, we convert the int64 values back to double precision numbers and stores their hexadecimal/binary representation. To check other operator, we also multiply 1.1 with 0.2 and 1.1 with -0.2. Note that in case of multiplication the precision values are also need to be multiplied to get the correct value, i.e., if for 1.1 and 0.2 we use a precision value of 100, then for the conversion we need to use a precision value of 10000. The corresponding output can be seen below (outputs are printed via std::cout calls in the extern functions):
 ```
 [DOUBLE_TO_INT64]    received double in hex: 9a9999999999f13f
 [DOUBLE_TO_INT64]    received double as double: 1.1
@@ -113,6 +113,7 @@ In the above example, we define 3 double precision number via their 8-byte hexad
 [18:12:57.908] [bmv2] [T] [thread 1229] [33.0] [cxt 0] ../../p4debug/monitoring.p4(568) Primitive p4_logger(mmultiply_res_double)
 [P4 logger]    295c8fc2f528ccbf
 ```
+<a name="myfootnote1">1</a>: Use this online tool to get your number for testing: [https://gregstoll.dyndns.org/~gregstoll/floattohex/](https://gregstoll.dyndns.org/~gregstoll/floattohex/) (take care of the endianness -> networking is big-endian, but x86 architecture is little-endian)
 
 # Compiling
 For compiling the sources you don't need anything special, just compile the compiler ([p4c](https://github.com/p4lang/p4c)) and the software switch ([behavioral-model](https://github.com/p4lang/behavioral-model)) according to their basic instructions.
