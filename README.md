@@ -118,6 +118,21 @@ In the above example, we define 3 double precision number via their 8-byte hexad
 # Compiling
 For compiling the sources you don't need anything special, just compile the compiler ([p4c](https://github.com/p4lang/p4c)) and the software switch ([behavioral-model](https://github.com/p4lang/behavioral-model)) according to their basic instructions.
 
+To not mess up your working environment, do not run `make install`!
+
+# Running/Testing
+I have also provided the above mentioned source code in a simple application derived from [here](https://github.com/cslev/p4extern).
+## Compile the `monitoring.p4` application:
+```
+~/p4_double_precisison$ ./p4c/build/p4c-bm2-ss monitoring.p4 -o monitoring.json
+```
+## Run it
+```
+~/p4_double_precisison$ ./behavioral-model/targets/simple_switch/simple_switch -i 0@eno3 -i 1@eno4 --log-console monitoring.json
+```
+Send a random packet to the switch (e.g., via scapy) and look for the output.
+
+
 # You want to add your own extern?
 In case you want to modify the sources or even add your own externs, but don't know how to do the first steps, go to [this repository](https://github.com/cslev/p4extern/)
 
