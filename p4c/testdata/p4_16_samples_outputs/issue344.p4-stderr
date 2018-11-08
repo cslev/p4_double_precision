@@ -1,4 +1,0 @@
-issue344.p4(24): warning: c: unused instance
-top(C()) c;
-         ^
-warning: Program does not contain a `main' module

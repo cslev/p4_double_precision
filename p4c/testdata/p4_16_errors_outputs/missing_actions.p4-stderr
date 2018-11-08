@@ -1,3 +1,0 @@
-missing_actions.p4(19): error: Table t does not have an `actions' property
-    table t {
-          ^

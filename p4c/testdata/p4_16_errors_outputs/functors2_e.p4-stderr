@@ -1,3 +1,0 @@
-functors2_e.p4(20): error: p: Cannot refer to control inside itself
-        p.apply();
-        ^

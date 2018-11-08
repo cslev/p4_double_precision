@@ -1,3 +1,0 @@
-missing_match.p4(20): error: Could not find declaration for noSuchMatch
-        key = { b : noSuchMatch; }
-                    ^^^^^^^^^^^

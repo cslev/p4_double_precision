@@ -1,3 +1,0 @@
-issue803-1.p4(14): error: ig1: Passing 1 arguments when 0 expected
-Ingress<H>(ing_parse()) ig1;
-                        ^^^

@@ -1,3 +1,0 @@
-push_nonconstant.p4(10): error: x: argument must be a constant
-        h.push_front(x);
-                     ^

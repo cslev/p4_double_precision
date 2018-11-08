@@ -1,3 +1,0 @@
-call-table.p4(24): error: t.apply: tables cannot be invoked from actions
-        t.apply(); // cannot invoke table from action
-        ^^^^^^^^^

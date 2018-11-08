@@ -1,3 +1,0 @@
-duplicate-label.p4(26): error: a: duplicate switch label
-            a: { arun = 1; } // duplicate label
-            ^
