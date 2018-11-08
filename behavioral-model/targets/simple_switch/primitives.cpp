@@ -30,8 +30,8 @@
 #include <random>
 #include <thread>
 
-#include <stdlib.h>     /* atof */
 // -- LEVI for double
+#include <stdlib.h>     /* atof */
 #include <iostream>
 #include <string>
 #include <stdio.h>
