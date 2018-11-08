@@ -258,6 +258,8 @@ class V1Model : public ::Model::Model {
             registers(), drop("mark_to_drop"),
             // -- LEVI (go to line 300-ish as well and 117)
             p4_logger("p4_logger"),
+            double_to_int64("double_to_int64"),
+            int64_to_double("int64_to_double"),
             // -- END LEVI
             recirculate("recirculate"), verify_checksum("verify_checksum"),
             update_checksum("update_checksum"),
@@ -298,6 +300,8 @@ class V1Model : public ::Model::Model {
     ::Model::Elem       drop;
     // -- LEVI (go to line 260)
     ::Model::Elem       p4_logger;
+    ::Model::Elem       double_to_int64;
+    ::Model::Elem       int64_to_double;
     // -- END LEVI
     ::Model::Elem       recirculate;
     ::Model::Elem       verify_checksum;

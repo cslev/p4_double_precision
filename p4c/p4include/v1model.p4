@@ -128,6 +128,9 @@ extern void random<T>(out T result, in T lo, in T hi);
 
 // -- LEVI
 extern void p4_logger<T>(in T a);
+extern void double_to_int64<T>(out T int64_num, in T double_number_as_hex, in T precision);
+extern void int64_to_double<T>(out T double_num, in T int64_num_as_hex, in T precision);
+// extern void int64_to_double<T>(out T double_number_as_hex, in T integer_number_as_hex, in T precision);
 // -- END LEVI
 
 

@@ -2404,6 +2404,8 @@ void ProgramStructure::populateOutputNames() {
         "mark_to_drop",
         // -- LEVI
         "p4_logger",
+        "double_to_int64",
+        "int64_to_double",
         // -- END LEVI
         "hash",
         "resubmit",
