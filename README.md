@@ -113,7 +113,7 @@ In the above example, we define 3 double precision number via their 8-byte hexad
 [18:12:57.908] [bmv2] [T] [thread 1229] [33.0] [cxt 0] ../../p4debug/monitoring.p4(568) Primitive p4_logger(mmultiply_res_double)
 [P4 logger]    295c8fc2f528ccbf
 ```
-<a name="myfootnote1">1</a>: Use this online tool to get your number for testing: [https://gregstoll.dyndns.org/~gregstoll/floattohex/](https://gregstoll.dyndns.org/~gregstoll/floattohex/) (take care of the endianness -> networking is big-endian, but x86 architecture is little-endian)
+<a name="myfootnote1"><sup>1</sup></a> Use this online tool to get your number for testing: [https://gregstoll.dyndns.org/~gregstoll/floattohex/](https://gregstoll.dyndns.org/~gregstoll/floattohex/) (take care of the endianness -> networking is big-endian, but x86 architecture is little-endian)
 
 # Compiling
 For compiling the sources you don't need anything special, just compile the compiler ([p4c](https://github.com/p4lang/p4c)) and the software switch ([behavioral-model](https://github.com/p4lang/behavioral-model)) according to their basic instructions.
