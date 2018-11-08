@@ -4,7 +4,6 @@
 
 // #define ENABLE_DEBUG_ETHERNET
 // #define ENABLE_DEBUG_ARP
-#define ENABLE_DEBUG_IP
 //#define ENABLE_DEBUG_TCP
 // #define ENABLE_DEBUG_UDP
 // #define ENABLE_DEBUG_META
